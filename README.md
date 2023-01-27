@@ -67,7 +67,7 @@ What to display your song data in:
 
 ## Project Extensions:
 
-- [ ] Add in your own CSS to personalize your project.
+- [x] Add in your own CSS to personalize your project.
 - [ ] Use .length to display how many songs are on your list.
 - [ ] Add a clear or delete button to clear songs on your list.
 - [ ] Refactor your project further by utilizing functions to simplify your code.
