@@ -32,6 +32,12 @@ let urlList = ["https://music.youtube.com/watch?v=Fx3b85eDQvw&feature=share", "h
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 // task 14: create an array that stores all of the objects.
 
+let song = [
+  {
+    imageUrl: "",
+    
+  }
+]
 
 
 //REFACTOR LOOPS DAY 
@@ -77,8 +83,8 @@ function displaySongInfo() {
 
   // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
-  for (let image of imageList) {
-    displayImage.insertAdjacentHTML('beforeend', `<img src='${image}'>`);
+  for (let i in imageList) {
+    displayImage.insertAdjacentHTML('beforeend', `<a href="${urlList[i]}"><img src='${imageList[i]}'></a>`);
   }
 
   for (let song of songList) {
