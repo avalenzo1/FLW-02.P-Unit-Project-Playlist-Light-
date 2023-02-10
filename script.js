@@ -76,7 +76,12 @@ function emptyDisplay() {
   displayLink.innerHTML = "";
 }
 
-
+function clearForm() {
+  image.value = "";
+  songName.value = "";
+  artist.value = "";
+  songLink.value = "";
+}
 
 
 function displaySongInfo() {
@@ -109,6 +114,7 @@ add.onclick = function() {
   emptyDisplay();
   addSongInfo();
   displaySongInfo();
+  clearForm();
 };
 
 // function call to display stored songs
