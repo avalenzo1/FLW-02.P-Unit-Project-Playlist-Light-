@@ -32,7 +32,7 @@ let urlList = ["https://music.youtube.com/watch?v=Fx3b85eDQvw&feature=share", "h
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 // task 14: create an array that stores all of the objects.
 
-let song = [
+let songData = [
   {
     imageUrl: "",
     
