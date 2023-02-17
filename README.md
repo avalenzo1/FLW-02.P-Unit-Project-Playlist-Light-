@@ -53,23 +53,23 @@ What to display your song data in:
 
 ## JavaScript: Refactor Arrays to Objects
 
-11. [ ] Comment out the arrays data.
-12. [ ] Create an object for each of your songs.
-13. [ ] Inside each object, add key/value pairs to store the image url, song name, artist, and song link.
-14. [ ] Create an array that stores all of the objects.
+11. [x] Comment out the arrays data.
+12. [x] Create an object for each of your songs.
+13. [x] Inside each object, add key/value pairs to store the image url, song name, artist, and song link.
+14. [x] Create an array that stores all of the objects.
 
 ## JavaScript: Refactor Loops to Display Info
 
-15. [ ] Update your `addSongInfo` function so the input values are saved in as values in a new object.
-16. [ ] Update your `.push()` so the input object is added to your array of objects.
-17. [ ] Update your loops based on your new array of objects.
+15. [x] Update your `addSongInfo` function so the input values are saved in as values in a new object.
+16. [x] Update your `.push()` so the input object is added to your array of objects.
+17. [x] Update your loops based on your new array of objects.
 
 
 ## Project Extensions:
 
 - [x] Add in your own CSS to personalize your project.
-- [ ] Use .length to display how many songs are on your list.
-- [ ] Add a clear or delete button to clear songs on your list.
+- [x] Use .length to display how many songs are on your list.
+- [x] Add a clear or delete button to clear songs on your list.
 - [ ] Refactor your project further by utilizing functions to simplify your code.
 - [ ] Add a shuffle button and functionality.
 

@@ -40,6 +40,13 @@ h1 {
   border-radius: 10px;
 }
 
+.display-options div {
+  font-size: 18px;
+  height: 100px;
+  font-weight: bold;
+  
+}
+
 .display-song p {
   font-size: 18px;
   height: 100px;
@@ -68,10 +75,20 @@ h1 {
   font-size: 18px;
 }
 
-input {
+.control-input {
+  display: inline-block;
   position: relative;
-  border: solid 1px;
   margin: 5px;
+}
+
+.control-input .error-data {
+  background-color: #ff4d00;
+  color: white;
+  font-size: small;
+}
+
+input {
+  border: solid 1px;
   padding: 5px 10px;
   font-size: 14px;
   border-color: #ccc;

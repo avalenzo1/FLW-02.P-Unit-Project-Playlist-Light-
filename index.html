@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 
@@ -22,29 +24,47 @@
   <div class="form">
     <p>Add a new song:</p>
     <div class="inputs">
-      <input placeholder="Image URL" class="image" value="" />
-      <input placeholder="Song Name" class="song-name" value="" />
-      <input placeholder="Artist" class="artist" value="" />
-      <input placeholder="Song Link Address" class="song-link" value="" />
+      <div class="control-input" id="image-control">
+        <input placeholder="Image URL" class="image" value="" />
+        <span class="error-data"></span>
+      </div>
+      <div class="control-input" id="name-control">
+        <input placeholder="Song Name" class="song-name" value="" />
+        <span class="error-data"></span>
+      </div>
+      <div class="control-input" id="artist-control">
+        <input placeholder="Artist" class="artist" value="" />
+        <span class="error-data"></span>
+      </div>
+      <div class="control-input" id="link-control">
+        <input placeholder="Song Link Address" class="song-link" value="" />
+        <span class="error-data"></span>
+      </div>
     </div>
     <br>
     <button class="add">Add</button>
   </div>
 
+  <p>You currently have <span class="song-length">0</span> songs.</p>
 
   <div class="heading">
     <h4>Image</h4>
     <h4>Song</h4>
     <h4>Artist</h4>
     <h4>Song Link</h4>
+    <h4>Options</h4>
   </div>
 
-
   <div class="display">
+
     <div class="column display-image"></div>
     <div class="column display-song"></div>
     <div class="column display-artist"></div>
     <div class="column display-link"></div>
+    <div class="column display-options">
+
+
+    </div>
   </div>
 
 </body>
