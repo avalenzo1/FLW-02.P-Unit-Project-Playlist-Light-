@@ -57,7 +57,7 @@ function randomNumber(min, max) {
 }
 
 class Song {
-    (imageSource, songName, artistName, songLink) {
+    constructor (imageSource, songName, artistName, songLink) {
     this.image = imageSource;
     this.name = songName;
     this.artist = artistName;
