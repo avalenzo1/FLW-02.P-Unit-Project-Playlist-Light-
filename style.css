@@ -106,6 +106,13 @@ button {
   color: black;
 }
 
+.delete {
+  background-color: #2b2322;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: none;
+}
+
 body {
   background: #22232a;
 color: white;

@@ -41,14 +41,23 @@ let displayOptions = document.querySelector(".display-options");
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 // task 14: create an array that stores all of the objects.
 
+/** 
+* Functions from Stackoverflow
+*/
+
 function isEmpty(str) {
-    // https://stackoverflow.com/a/28485815
-  
-    return !str.trim().length;
+  // https://stackoverflow.com/a/28485815
+
+  return !str.trim().length;
+}
+
+function randomNumber(min, max) {
+  // https://stackoverflow.com/a/24152886
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 class Song {
-  constructor(imageSource, songName, artistName, songLink) {
+    (imageSource, songName, artistName, songLink) {
     this.image = imageSource;
     this.name = songName;
     this.artist = artistName;
@@ -89,17 +98,11 @@ function addSongInfo() {
   errorSongName.innerHTML = "";
   errorArtist.innerHTML = "";
   errorSongLink.innerHTML = "";
-  
+
   if (isEmpty(userImage)) {
     errorImage.innerHTML = "You need to type something";
 
     error = true;
-  } else {
-    try {
-      new URL(userImage)
-    } catch {
-      errorSongLink.innerHTML = "Invalid URL";
-    }
   }
 
   if (isEmpty(userSong)) {
@@ -173,22 +176,30 @@ function displaySongInfo() {
     displayLink.insertAdjacentHTML('beforeend', `<a href="${song.link}">${song.link}</a>`);
     displayOptions.insertAdjacentHTML('beforeend', `
     <div>
-      <button onclick="deleteSong(${index})" data-opt="delete">
+      <button onclick="deleteSong(${index})" data-opt="delete" class="delete">
         <span class="material-symbols-sharp">
           delete
         </span>
       </button>
     </div>`
-  );
+    );
   });
 }
 
+function shuffleList() {
+  let newList = songData.sort((a, b) => 0.5 - Math.random());
+  songData = newList;
+  
+  emptyDisplay();
+  displaySongInfo();
+}
+
+
 function deleteSong(index) {
-  console.log(songData[index].name + " was deleted.");
-  console.log(songData)
+  // deletes song from songData based on index parameter
+  songData.splice(index, 1);
 
-  songData.splice(index,1);
-
+  // resets the list with new songData
   emptyDisplay();
   displaySongInfo();
 }

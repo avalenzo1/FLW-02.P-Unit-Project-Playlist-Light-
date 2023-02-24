@@ -71,7 +71,7 @@ What to display your song data in:
 - [x] Use .length to display how many songs are on your list.
 - [x] Add a clear or delete button to clear songs on your list.
 - [ ] Refactor your project further by utilizing functions to simplify your code.
-- [ ] Add a shuffle button and functionality.
+- [x] Add a shuffle button and functionality.
 
 
 ## References/Tools
