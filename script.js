@@ -57,7 +57,7 @@ function randomNumber(min, max) {
 }
 
 class Song {
-    constructor (imageSource, songName, artistName, songLink) {
+  constructor(imageSource, songName, artistName, songLink) {
     this.image = imageSource;
     this.name = songName;
     this.artist = artistName;
@@ -125,7 +125,9 @@ function addSongInfo() {
     try {
       new URL(userLink)
     } catch {
+      userLink.value = "";
       errorSongLink.innerHTML = "Invalid URL";
+      error = true;
     }
   }
 
@@ -138,6 +140,8 @@ function addSongInfo() {
   const song = new Song(userImage, userSong, userArtist, userLink);
 
   songData.push(song);
+
+  clearForm();
 }
 
 
@@ -189,7 +193,7 @@ function displaySongInfo() {
 function shuffleList() {
   let newList = songData.sort((a, b) => 0.5 - Math.random());
   songData = newList;
-  
+
   emptyDisplay();
   displaySongInfo();
 }
@@ -209,7 +213,6 @@ add.onclick = function() {
   emptyDisplay();
   addSongInfo();
   displaySongInfo();
-  clearForm();
 };
 
 // function call to display stored songs
